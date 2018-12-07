@@ -15,7 +15,7 @@ onLeftSwipe = function() {
     console.log('On left swipe');
 }
 onRightSwipe = function() {
-    console.log('On left swipe');
+    console.log('On right swipe');
 }
 onUpSwipe = function() {
     console.log('On up swipe');

@@ -69,11 +69,10 @@ class SwipeJsListener {
     module.exports = SwipeJsListener;
   } else {
     if (typeof define === 'function' && define.amd) {
-      define([], function () {
+      define([], function() {
         return SwipeJsListener;
       });
     } else {
       window.SwipeJsListener = SwipeJsListener;
     }
   }
-  

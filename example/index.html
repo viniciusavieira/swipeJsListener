@@ -1,0 +1,45 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SwipeJsListener example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="../dist/swipeJsListener.js"></script>
+</head>
+<body>
+    <h1>Lets see how swipeJsListener works!</h1>
+    <div id='container' class="container">
+        SWIPE!
+    </div>
+</body>
+<script>
+
+remove = function() {
+  this.swipeJsListener.removeSwipeListener();
+}
+
+onLeftSwipe = function() {
+    console.log('On left swipe');
+}
+onRightSwipe = function() {
+    console.log('On left swipe');
+}
+onUpSwipe = function() {
+    console.log('On up swipe');
+}
+onDownSwipe = function() {
+    console.log('On down swipe');
+}
+
+this.swipeJsListener = new SwipeJsListener();
+this.swipeJsListener.addSwipeListener(document.querySelector('#container'), {
+callbackToSwipeLeft: this.onLeftSwipe,
+callbackToSwipeRight: this.onRightSwipe,
+callbackToSwipeUp: this.onUpSwipe,
+callbackToSwipeDown: this.onDownSwipe,
+});
+
+</script>
+</html>

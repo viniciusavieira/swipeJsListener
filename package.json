@@ -1,24 +1,37 @@
 {
-    "name": "swipe-js-listener",
-    "version": "1.0.0",
-    "description": "A small class to listen swipe events and invoke callbacks to them",
-    "main": "swipeListener.js",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Chineis/swipeListener.git"
-    },
-    "keywords": [
-      "swipe",
-      "gesture",
-      "event",
-      "listener",
-      "js",
-      "web"
-    ],
-    "author": "Vinicius Vieira (Chineis)",
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/Chineis/swipeListener/issues"
-    },
-    "homepage": "https://github.com/Chineis/swipeListener",
+  "name": "swipe-js-listener",
+  "version": "1.0.0",
+  "description": "A small class to listen swipe events and invoke callbacks to them",
+  "main": "swipeJsListener.js",
+  "scripts": {
+    "build": "babel swipeJsListener.js --out-file dist/swipeJsListener.js"
+  },
+  "engines": {
+    "npm": ">=6",
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chineis/swipeJsListener.git"
+  },
+  "keywords": [
+    "swipe",
+    "gesture",
+    "event",
+    "listener",
+    "js",
+    "web"
+  ],
+  "author": "Vinicius Vieira (Chineis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chineis/swipeJsListener/issues"
+  },
+  "homepage": "https://github.com/Chineis/swipeJsListener",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
   }
+}

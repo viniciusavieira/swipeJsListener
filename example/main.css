@@ -1,0 +1,23 @@
+html, body, #container, #message {
+    height: 100%;
+    width: 100%;
+    overflow: none;
+    font-family: 'arial';
+    text-align: center;
+    margin: 0;
+    cursor: default;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    font-size: 48px;
+    word-wrap: break-word;
+    color: rgba(0, 0, 0, 0.3);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

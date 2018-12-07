@@ -2,6 +2,9 @@
 A small class to listen swipe events and invoke callbacks to them
 
 Usage:
+
+You can download the js and include in your builder.
+
 ```
 config = () => {
   this.swipeListener = new SwipeListener();

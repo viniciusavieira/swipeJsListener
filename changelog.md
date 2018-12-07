@@ -2,5 +2,5 @@
 
 ### 1.0.0
 
-- Basic swipe-js-listener.
+- First swipe-js-listener version.
 - Used on desktops using mobile emulator.

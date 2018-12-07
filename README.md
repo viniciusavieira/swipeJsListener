@@ -7,7 +7,7 @@ You can download the js and include in your builder, or import it as a module if
 ```
 <script src="path/to/swipeJsListener.js" type="text/javascript"></script>
 OR
-import SwipeListener from '../../../utils/SwipeListener';
+import SwipeJsListener from '../../../utils/swipeJsListener';
 ```
 And in your view or js you can use it(arrow functions are no obligatory).
 ```

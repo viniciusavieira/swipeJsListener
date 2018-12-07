@@ -1,4 +1,4 @@
-class SwipeListener {
+class SwipeJsListener {
 
     constructor() {
   
@@ -65,5 +65,15 @@ class SwipeListener {
   
   }
   
-  export default SwipeListener;
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = SwipeJsListener;
+  } else {
+    if (typeof define === 'function' && define.amd) {
+      define([], function () {
+        return SwipeJsListener;
+      });
+    } else {
+      window.SwipeJsListener = SwipeJsListener;
+    }
+  }
   

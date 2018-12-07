@@ -1,11 +1,11 @@
-# swipeListener
+# swipeJsListener
 A small class to listen swipe events and invoke callbacks to them
 
 Usage:
 ```
 config = () => {
-  this.swipeListener = new SwipeListener();
-  this.swipeListener.addSwipeListener(this, {
+  this.swipeJsListener = new SwipeJsListener();
+  this.swipeJsListener.addSwipeListener(this, {
     callbackToSwipeLeft: this.onLeftSwipe,
     callbackToSwipeRight: this.onRightSwipe,
     callbackToSwipeUp: this.onUpSwipe,
@@ -14,7 +14,7 @@ config = () => {
 }
 
 remove = () => {
-  this.removeSwipeListener();
+  this.swipeJsListener.removeSwipeListener();
 }
 
 onLeftSwipe = () => { 

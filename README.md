@@ -26,6 +26,7 @@ You can also download the JS in the dist folder and include in your project, it 
 And in your view or js you can use it, the first argument is the context(this) and the second is an Object that can contains keys pointing to the callbacks, you can pass only the keys you use, you're not obliged to pass all the keys as parameters in the Object.
 
 ```
+//Scope declaration only to show context.
 (function() {
     
     remove = function() {

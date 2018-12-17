@@ -11,7 +11,7 @@ npm i swipe-js-listener
 
 It should be compatible with bundlers like webpack using mobule.exports as also to projects using require/amd.
 ```
-import SwipeJsListener from 'swipeJsListener';
+import SwipeJsListener from 'SwipeJsListener';
 ```
 
 ```

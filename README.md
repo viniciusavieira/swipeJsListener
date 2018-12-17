@@ -11,7 +11,7 @@ npm i swipe-js-listener
 
 It should be compatible with bundlers like webpack using mobule.exports as also to projects using require/amd.
 ```
-import SwipeJsListener from 'swipeJsListener';
+import SwipeJsListener from 'SwipeJsListener';
 ```
 
 ```
@@ -23,7 +23,7 @@ You can also download the JS in the dist folder and include in your project, it 
 <script src="path/swipeJsListener.js" type="text/javascript"></script>
 ```
 
-And in your view or js you can use it, the first argument is the context(this) and the second is an Object that can contains keys pointing to the callbacks, you can pass only the keys you use, you're obliged to pass all the keys as parameters in the Object.
+And in your view or js you can use it, the first argument is the context(this) and the second is an Object that can contains keys pointing to the callbacks, you can pass only the keys you use, you're not obliged to pass all the keys as parameters in the Object.
 
 ```
 (function() {

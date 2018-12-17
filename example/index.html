@@ -15,31 +15,35 @@
     </div>
 </body>
 <script>
+(function() {
+    
+    remove = function() {
+        this.swipeJsListener.removeSwipeListener();
+    }
 
-remove = function() {
-  this.swipeJsListener.removeSwipeListener();
-}
+    onLeftSwipe = function() {
+        console.log('On left swipe');
+    }
+    onRightSwipe = function() {
+        console.log('On right swipe');
+    }
+    onUpSwipe = function() {
+        console.log('On up swipe');
+    }
+    onDownSwipe = function() {
+        console.log('On down swipe');
+    }
+    
+    this.swipeJsListener = new SwipeJsListener();
+    this.swipeJsListener.addSwipeListener(this, {
+        callbackToSwipeLeft: onLeftSwipe,
+        callbackToSwipeRight: onRightSwipe,
+        callbackToSwipeUp: onUpSwipe,
+        callbackToSwipeDown: onDownSwipe,
+    });
+    
+})();
 
-onLeftSwipe = function() {
-    console.log('On left swipe');
-}
-onRightSwipe = function() {
-    console.log('On rigth swipe');
-}
-onUpSwipe = function() {
-    console.log('On up swipe');
-}
-onDownSwipe = function() {
-    console.log('On down swipe');
-}
-
-this.swipeJsListener = new SwipeJsListener();
-this.swipeJsListener.addSwipeListener(document.querySelector('#container'), {
-    callbackToSwipeLeft: this.onLeftSwipe,
-    callbackToSwipeRight: this.onRightSwipe,
-    callbackToSwipeUp: this.onUpSwipe,
-    callbackToSwipeDown: this.onDownSwipe,
-});
 
 </script>
 </html>

@@ -22,7 +22,7 @@ class SwipeJsListener {
     
       const xDiff = this.xDown - evt.touches[0].clientX;
       const yDiff = this.yDown - evt.touches[0].clientY;
-    
+
       if (Math.abs(xDiff) > Math.abs(yDiff)) {
     
         if (xDiff > 0 && Object.prototype.hasOwnProperty.call(this.callbackFuncObj, 'callbackToSwipeLeft')) this.callbackFuncObj.callbackToSwipeLeft.call(this.ctx);

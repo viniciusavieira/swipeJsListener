@@ -1,5 +1,8 @@
 # changelog
 
+### 1.1.1
+- Project docs update.
+
 ### 1.1.0
  - Minified build.
  - Better project structure.

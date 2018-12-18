@@ -1,6 +1,6 @@
 {
   "name": "swipe-js-listener",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A small class to listen swipe events and invoke callbacks to them",
   "main": "swipeJsListener.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Chineis/swipeJsListener.git"
+    "url": "git+https://github.com/viniciusavieira/swipeJsListener.git"
   },
   "keywords": [
     "swipe",
@@ -25,9 +25,9 @@
   "author": "Vinicius Vieira (Chineis)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Chineis/swipeJsListener/issues"
+    "url": "https://github.com/viniciusavieira/swipeJsListener/issues"
   },
-  "homepage": "https://github.com/Chineis/swipeJsListener",
+  "homepage": "https://github.com/viniciusavieira/swipeJsListener",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",

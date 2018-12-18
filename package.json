@@ -1,6 +1,6 @@
 {
   "name": "swipe-js-listener",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A small class to listen swipe events and invoke callbacks to them",
   "main": "swipeJsListener.js",
   "scripts": {

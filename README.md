@@ -3,10 +3,14 @@ A small class to listen swipe events and invoke callbacks to them
 
 Usage:
 
-Install with Npm
+Install with Npm or Yarn
 
 ```
 npm i swipe-js-listener
+```
+Or
+```
+yarn add swipe-js-listener
 ```
 
 It should be compatible with bundlers like webpack using mobule.exports as also to projects using require/amd.

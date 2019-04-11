@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1554991469549" clover="3.2.0">
-  <project timestamp="1554991469549" name="All files">
+<coverage generated="1554995169511" clover="3.2.0">
+  <project timestamp="1554995169512" name="All files">
     <metrics statements="34" coveredstatements="12" conditionals="26" coveredconditionals="3" methods="6" coveredmethods="2" elements="66" coveredelements="17" complexity="0" loc="34" ncloc="34" packages="1" files="1" classes="1"/>
     <file name="swipeJsListener.js" path="/home/pismo/github/swipeJsListener/src/swipeJsListener.js">
       <metrics statements="34" coveredstatements="12" conditionals="26" coveredconditionals="3" methods="6" coveredmethods="2"/>

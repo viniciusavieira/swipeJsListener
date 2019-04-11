@@ -3,6 +3,8 @@ A small class to listen swipe events and invoke callbacks to them
 
 [![Coverage Status](https://coveralls.io/repos/github/viniciusavieira/swipeJsListener/badge.svg?branch=feature%2Ftests)](https://coveralls.io/github/viniciusavieira/swipeJsListener?branch=feature%2Ftests)
 
+[![Build Status](https://travis-ci.org/viniciusavieira/swipeJsListener.svg?branch=master)](https://travis-ci.org/viniciusavieira/swipeJsListener)
+
 Usage:
 
 Install with Npm

@@ -1,10 +1,13 @@
 {
   "name": "swipe-js-listener",
-  "version": "1.1.3",
+  "version": "1.1.0",
   "description": "A small class to listen swipe events and invoke callbacks to them",
   "main": "swipeJsListener.js",
   "scripts": {
-    "build": "babel src/swipeJsListener.js --out-file dist/swipeJsListener.js"
+    "build": "babel src/swipeJsListener.js --out-file dist/swipeJsListener.js",
+    "test": "jest --coverage",
+    "test-watch": "NODE_ENV=test jest --watch",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
     "npm": ">=6",
@@ -12,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viniciusavieira/swipeJsListener.git"
+    "url": "git+https://github.com/Chineis/swipeJsListener.git"
   },
   "keywords": [
     "swipe",
@@ -22,17 +25,29 @@
     "js",
     "web"
   ],
-  "author": "@viniciusavieira Vinicius Vieira (Chineis)",
+  "author": "Vinicius Vieira (Chineis)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/viniciusavieira/swipeJsListener/issues"
+    "url": "https://github.com/Chineis/swipeJsListener/issues"
   },
-  "homepage": "https://github.com/viniciusavieira/swipeJsListener",
+  "homepage": "https://github.com/Chineis/swipeJsListener",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-minify": "^0.5.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "7.2.2",
+    "@babel/plugin-transform-arrow-functions": "7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-preset-minify": "^0.5.0",
+    "babel-loader": "^8.0.5",
+    "coveralls": "^3.0.3",
+    "dom-testing-library": "^3.19.0",
+    "jest-dom": "3.1.3",
+    "jest": "^24.7.1"
+  },
+  "jest": {
+    "coverageDirectory": "<rootDir>/coverage"
   }
 }

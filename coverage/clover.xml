@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1554995883038" clover="3.2.0">
+  <project timestamp="1554995883038" name="All files">
+    <metrics statements="34" coveredstatements="12" conditionals="26" coveredconditionals="3" methods="6" coveredmethods="2" elements="66" coveredelements="17" complexity="0" loc="34" ncloc="34" packages="1" files="1" classes="1"/>
+    <file name="swipeJsListener.js" path="/home/pismo/github/swipeJsListener/src/swipeJsListener.js">
+      <metrics statements="34" coveredstatements="12" conditionals="26" coveredconditionals="3" methods="6" coveredmethods="2"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="33" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="46" count="2" type="stmt"/>
+      <line num="47" count="2" type="stmt"/>
+      <line num="48" count="2" type="stmt"/>
+      <line num="49" count="2" type="stmt"/>
+      <line num="50" count="2" type="stmt"/>
+      <line num="51" count="2" type="stmt"/>
+      <line num="57" count="0" type="stmt"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="68" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="69" count="1" type="stmt"/>
+      <line num="71" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>

@@ -1,10 +1,11 @@
 {
   "presets": [
-    "es2015",
+    "@babel/preset-env",
     "minify"
   ],
   "plugins": [
-    "transform-class-properties",
-    ["transform-es2015-arrow-functions", { "spec": true }]
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-dynamic-import",
   ]
 }

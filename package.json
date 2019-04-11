@@ -7,7 +7,7 @@
     "build": "babel src/swipeJsListener.js --out-file dist/swipeJsListener.js",
     "test": "jest --coverage",
     "test-watch": "NODE_ENV=test jest --watch",
-    "coveralls": "coveralls"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
     "npm": ">=6",

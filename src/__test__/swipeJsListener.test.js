@@ -115,7 +115,6 @@ describe('it should handle Swipe tests', () => {
     // touchStartOn(swipeTarget, 0, 0)
     // touchMoveOn(swipeTarget, 50, 0)
     // touchEndOn(swipeTarget, 50, 0)
-    
     // expect(currentDirection).toBe('rigth')
   })
 })

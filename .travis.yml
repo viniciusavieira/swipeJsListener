@@ -28,6 +28,6 @@ jobs:
     - stage: build
       name: "Build project"
       script: npm run build
-      
-script:
-  - npm run coveralls
+    - stage: coverage
+      name: "Generate coverage"
+      script: npm run coveralls 

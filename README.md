@@ -1,7 +1,7 @@
 # swipeJsListener
 A small class to listen swipe events and invoke callbacks to them
 
-[![Build Status](https://travis-ci.org/viniciusavieira/swipeJsListener.svg?branch=master)](https://travis-ci.org/viniciusavieira/swipeJsListener) [![Coverage Status](https://coveralls.io/repos/github/viniciusavieira/swipeJsListener/badge.svg)](https://coveralls.io/github/viniciusavieira/swipeJsListener)
+[![npm version](https://badge.fury.io/js/swipe-js-listener.svg)](https://badge.fury.io/js/swipe-js-listener) [![Build Status](https://travis-ci.org/viniciusavieira/swipeJsListener.svg?branch=master)](https://travis-ci.org/viniciusavieira/swipeJsListener) [![Coverage Status](https://coveralls.io/repos/github/viniciusavieira/swipeJsListener/badge.svg)](https://coveralls.io/github/viniciusavieira/swipeJsListener)
 
 Usage:
 

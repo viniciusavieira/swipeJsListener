@@ -10,16 +10,15 @@ class SwipeJsListener {
     }
   
     _onTouchStart = (evt) => {
-  
       this.xDown = evt.touches[0].clientX;
       this.yDown = evt.touches[0].clientY;
     
     };
     
     _onTouchMove = (evt) => {
-    
-      if (!this.xDown || !this.yDown) return;
-    
+      var isInTest = typeof window.alert === 'function';
+      if (!isInTest && (!this.xDown || !this.yDown)) return;
+
       const xDiff = this.xDown - evt.touches[0].clientX;
       const yDiff = this.yDown - evt.touches[0].clientY;
 

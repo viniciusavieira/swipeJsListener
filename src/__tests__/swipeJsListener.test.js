@@ -1,6 +1,6 @@
 import SwipeJsListener from '../swipeJsListener';
-import { fireEvent, getByText } from 'dom-testing-library';
-import "jest-dom/extend-expect"
+import { fireEvent, getByText } from '@testing-library/dom';
+import "@testing-library/jest-dom/extend-expect"
 
 const getTestDOM = () => {
   const body = document.createElement('body')
@@ -12,71 +12,16 @@ const getTestDOM = () => {
   `
   return body
 }
-// https://gist.github.com/morewry/538efb737ed9c4e432e4
-const touchStartOn = (el, x = 0, y = 0) => {
-  try { 
-    e = document.createEvent('TouchEvent')
-    e.initTouchEvent("touchstart", true, true)
-  } catch (err) {
-    try {
-    	e = document.createEvent('UIEvent')
-    	e.initUIEvent("touchstart", true, true)
-    } catch (err) {
-      e = document.createEvent('Event')
-      e.initEvent("touchstart", true, true)
-    }
-  }
-  
-  e.targetTouches = [{
-    pageX: x,
-    pageY: y
-  }]
-  el.dispatchEvent(e)
-}
 
-// https://gist.github.com/morewry/538efb737ed9c4e432e4
-const touchMoveOn = (el, x = 0, y = 0) => {
-  try {
-    e = document.createEvent('TouchEvent')
-    e.initTouchEvent("touchmove", true, true)
-  } catch (err) {
-    try {
-    	e = document.createEvent('UIEvent')
-    	e.initUIEvent("touchmove", true, true)
-    } catch (err) {
-      e = document.createEvent('Event')
-      e.initEvent("touchmove", true, true)
-    }
+window.matchMedia = jest.fn().mockImplementation(query => {
+  return {
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
   }
-  
-  e.changedTouches = [{
-    pageX: x,
-    pageY: y
-  }]
-  el.dispatchEvent(e)
-}
-
-// https://gist.github.com/morewry/538efb737ed9c4e432e4
-const touchEndOn = (el, x = 0, y = 0) => {
-  try {
-    e = document.createEvent('TouchEvent')
-    e.initTouchEvent("touchend", true, true)
-  } catch (err) {
-    try {
-    	e = document.createEvent('UIEvent')
-    	e.initUIEvent("touchend", true, true)
-    } catch (err) {
-      e = document.createEvent('Event')
-      e.initEvent("touchend", true, true)
-    }
-  }
-  
-  e.changedTouches = [{
-    pageX: x,
-    pageY: y
-  }]
-  el.dispatchEvent(e)
-}
+})
 
 describe('it should handle Swipe tests', () => {
 
@@ -94,9 +39,7 @@ describe('it should handle Swipe tests', () => {
 
   test('it should listen for swipes', () => {
     let currentDirection = ''
-    const swipeCallback = (direction) => {
-      currentDirection = direction
-    }
+    const swipeCallback = direction => currentDirection = direction
 
     const swipe = new SwipeJsListener();
     const container = getTestDOM()
@@ -112,9 +55,12 @@ describe('it should handle Swipe tests', () => {
     const swipeTarget = getByText(container, 'SWIPE target!');
     expect(swipeTarget).toHaveTextContent('SWIPE target!')
 
-    // touchStartOn(swipeTarget, 0, 0)
-    // touchMoveOn(swipeTarget, 50, 0)
-    // touchEndOn(swipeTarget, 50, 0)
-    // expect(currentDirection).toBe('rigth')
+    const touchstart = [{ pageX: 0, pageY: 0 }];
+    const touchdest = [{ pageX: 513, pageY: 0 }];
+    const window = (container.ownerDocument || container).defaultView;
+    fireEvent.touchStart(container.firstChild, { touches: touchstart });
+    fireEvent.touchMove(window, { touches: touchdest });
+    fireEvent.touchEnd(window, { touches: touchdest });
+    expect(currentDirection).toBe('down')
   })
 })

@@ -13,16 +13,6 @@ const getTestDOM = () => {
   return body
 }
 
-window.matchMedia = jest.fn().mockImplementation(query => {
-  return {
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-  }
-})
-
 describe('it should handle Swipe tests', () => {
 
   test('it should add the class without errors', () => {
@@ -35,9 +25,43 @@ describe('it should handle Swipe tests', () => {
     });
 
     expect(swipe).toBeDefined()
+    swipe.removeSwipeListener();
   })
 
-  test('it should listen for swipes', () => {
+  test('it should listen for swipe right', () => {
+    let currentDirection = ''
+    const swipeCallback = direction => {
+      console.log('direction', direction)
+      currentDirection = direction
+    }
+
+    const swipe = new SwipeJsListener();
+    const container = getTestDOM()
+    
+    swipe.addSwipeListener(container, {
+      callbackToSwipeLeft: () => {swipeCallback('left')},
+      callbackToSwipeRight: () => {swipeCallback('rigth')},
+      callbackToSwipeUp: () => {swipeCallback('up')},
+      callbackToSwipeDown: () => {swipeCallback('down')},
+    });
+  
+    expect(swipe).toBeDefined()
+    const swipeTarget = getByText(container, 'SWIPE target!');
+    expect(swipeTarget).toHaveTextContent('SWIPE target!')
+
+    const touchstart = [{ clientX: 0, clientY: 0 }];
+    const touchdest = [{ clientX: 513, clientY: 0 }];
+    const window = (container.ownerDocument || container).defaultView;
+    fireEvent.touchStart(window, { touches: touchstart });
+    fireEvent.touchMove(window, { touches: touchdest });
+    fireEvent.touchEnd(window, { touches: touchdest });
+    
+    expect(currentDirection).toBe('rigth');
+    swipe.removeSwipeListener();
+
+  })
+
+  test('it should listen for swipe left', () => {
     let currentDirection = ''
     const swipeCallback = direction => currentDirection = direction
 
@@ -55,12 +79,69 @@ describe('it should handle Swipe tests', () => {
     const swipeTarget = getByText(container, 'SWIPE target!');
     expect(swipeTarget).toHaveTextContent('SWIPE target!')
 
-    const touchstart = [{ pageX: 0, pageY: 0 }];
-    const touchdest = [{ pageX: 513, pageY: 0 }];
+    const touchstart = [{ clientX: 0, clientY: 0 }];
+    const touchdest = [{ clientX: -500, clientY: 0 }];
     const window = (container.ownerDocument || container).defaultView;
-    fireEvent.touchStart(container.firstChild, { touches: touchstart });
+    fireEvent.touchStart(window, { touches: touchstart });
     fireEvent.touchMove(window, { touches: touchdest });
     fireEvent.touchEnd(window, { touches: touchdest });
-    expect(currentDirection).toBe('down')
+    expect(currentDirection).toBe('left');
+    swipe.removeSwipeListener();
+  })
+
+  test('it should listen for swipe left', () => {
+    let currentDirection = ''
+    const swipeCallback = direction => currentDirection = direction
+
+    const swipe = new SwipeJsListener();
+    const container = getTestDOM()
+    
+    swipe.addSwipeListener(container, {
+        callbackToSwipeLeft: () => {swipeCallback('left')},
+        callbackToSwipeRight: () => {swipeCallback('rigth')},
+        callbackToSwipeUp: () => {swipeCallback('up')},
+        callbackToSwipeDown: () => {swipeCallback('down')},
+    });
+  
+    expect(swipe).toBeDefined()
+    const swipeTarget = getByText(container, 'SWIPE target!');
+    expect(swipeTarget).toHaveTextContent('SWIPE target!')
+
+    const touchstart = [{ clientX: 0, clientY: 0 }];
+    const touchdest = [{ clientX: 0, clientY: -500 }];
+    const window = (container.ownerDocument || container).defaultView;
+    fireEvent.touchStart(window, { touches: touchstart });
+    fireEvent.touchMove(window, { touches: touchdest });
+    fireEvent.touchEnd(window, { touches: touchdest });
+    expect(currentDirection).toBe('up');
+    swipe.removeSwipeListener();
+  })
+
+  test('it should listen for swipe left', () => {
+    let currentDirection = ''
+    const swipeCallback = direction => currentDirection = direction
+
+    const swipe = new SwipeJsListener();
+    const container = getTestDOM()
+    
+    swipe.addSwipeListener(container, {
+        callbackToSwipeLeft: () => {swipeCallback('left')},
+        callbackToSwipeRight: () => {swipeCallback('rigth')},
+        callbackToSwipeUp: () => {swipeCallback('up')},
+        callbackToSwipeDown: () => {swipeCallback('down')},
+    });
+  
+    expect(swipe).toBeDefined()
+    const swipeTarget = getByText(container, 'SWIPE target!');
+    expect(swipeTarget).toHaveTextContent('SWIPE target!')
+
+    const touchstart = [{ clientX: 0, clientY: 0 }];
+    const touchdest = [{ clientX: 0, clientY: 500 }];
+    const window = (container.ownerDocument || container).defaultView;
+    fireEvent.touchStart(window, { touches: touchstart });
+    fireEvent.touchMove(window, { touches: touchdest });
+    fireEvent.touchEnd(window, { touches: touchdest });
+    expect(currentDirection).toBe('down');
+    swipe.removeSwipeListener();
   })
 })

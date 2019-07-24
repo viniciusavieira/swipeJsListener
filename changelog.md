@@ -1,5 +1,11 @@
 # changelog
 
+### 1.3.0
+- Improved test coverage.
+
+### 1.2.1
+- Project docs update.
+
 ### 1.1.1
 - Project docs update.
 

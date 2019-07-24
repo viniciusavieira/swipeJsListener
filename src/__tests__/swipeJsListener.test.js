@@ -89,7 +89,7 @@ describe('it should handle Swipe tests', () => {
     swipe.removeSwipeListener();
   })
 
-  test('it should listen for swipe left', () => {
+  test('it should listen for swipe up', () => {
     let currentDirection = ''
     const swipeCallback = direction => currentDirection = direction
 
@@ -117,7 +117,7 @@ describe('it should handle Swipe tests', () => {
     swipe.removeSwipeListener();
   })
 
-  test('it should listen for swipe left', () => {
+  test('it should listen for swipe down', () => {
     let currentDirection = ''
     const swipeCallback = direction => currentDirection = direction
 

@@ -1,5 +1,9 @@
 # changelog
 
+### 1.3.1
+- Improved test coverage.
+- Added Conventional Commits Badge. 
+
 ### 1.3.0
 - Improved test coverage.
 

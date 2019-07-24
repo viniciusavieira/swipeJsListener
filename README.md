@@ -1,11 +1,13 @@
 # swipeJsListener
 A small class to listen swipe events and invoke callbacks to them
 
-[![npm version](https://badge.fury.io/js/swipe-js-listener.svg)](https://badge.fury.io/js/swipe-js-listener) [![Build Status](https://travis-ci.org/viniciusavieira/swipeJsListener.svg?branch=master)](https://travis-ci.org/viniciusavieira/swipeJsListener) [![Coverage Status](https://coveralls.io/repos/github/viniciusavieira/swipeJsListener/badge.svg)](https://coveralls.io/github/viniciusavieira/swipeJsListener) [![Known Vulnerabilities](https://snyk.io/test/github/viniciusavieira/swipeJsListener/badge.svg?targetFile=package.json)](https://snyk.io/test/github/viniciusavieira/swipeJsListener?targetFile=package.json) [![Greenkeeper badge](https://badges.greenkeeper.io/viniciusavieira/swipeJsListener.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/swipe-js-listener.svg)](https://badge.fury.io/js/swipe-js-listener) [![Build Status](https://travis-ci.org/viniciusavieira/swipeJsListener.svg?branch=master)](https://travis-ci.org/viniciusavieira/swipeJsListener) [![Coverage Status](https://coveralls.io/repos/github/viniciusavieira/swipeJsListener/badge.svg)](https://coveralls.io/github/viniciusavieira/swipeJsListener) [![Known Vulnerabilities](https://snyk.io/test/github/viniciusavieira/swipeJsListener/badge.svg?targetFile=package.json)](https://snyk.io/test/github/viniciusavieira/swipeJsListener?targetFile=package.json) [![Greenkeeper badge](https://badges.greenkeeper.io/viniciusavieira/swipeJsListener.svg)](https://greenkeeper.io/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 
 Usage:
-
+This can be used with React and any other framework/lib you may want, at the bottom line is a simple class that invoke callbacks. 
+This is usefull if you want detect some interaction with screen, like and open menu that on swipe must be closed, all using JS.
+ 
 Install with Npm
 
 ```
